@@ -1,0 +1,43 @@
+<html>
+    <head><title></title></head>
+    <body>
+        {% csrf_token %} 
+        
+        <h3 align="center"><b>Class:{{class1}}</b></h3>
+        <h3 align="center"><b>Name of The Institution</b></h3>
+        <h3 align="center"><b>Performance Test</b></h3>
+        <h3 align="center"><b>{{subject}}</b></h3>
+        <h3 align="left"><b>Time: </b></h3>
+        <h3 align="right"><b>Mark:</b></h3>
+        <h3 align="center"><b><u>Section A</u></b></h3>
+        <h3 align="left"><b>Q1. Each Question Carry two mark each. </b></h3>
+        <ol type='1'>
+            {% for question in questions %}
+            {% if question.questiontype == 'twomark' %}
+            <li>{{ question.question }}</li>
+            {% endif %}
+            {% endfor %}
+        </ol>
+        
+        <h3 align="center"><b><u>Section B </u></b></h3>
+        <h3 align="left"><b>Q2. Each Question Carry three mark each. </b></h3>
+        <ol type='1'>
+            {% for question in questions %}
+            {% if question.questiontype == 'threemark' %}
+            <li>{{ question.question }}</li>
+            {% endif %}
+            {% endfor %}
+        </ol>
+        
+        <h3 align="center"><b><u>Section C</u></b></h3>
+        <h3 align="left"><b>Q3. Each Question Carry five mark each. </b></h3>
+        <ol type='1'>
+            {% for question in questions %}
+            {% if question.questiontype == 'fivemark' %}
+            <li>{{ question.question }}</li>
+            {% endif %}
+            {% endfor %}
+        </ol>
+
+    </body>
+</html>

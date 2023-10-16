@@ -1,0 +1,26 @@
+<html>
+    <head><title>table</title></head>
+    <body>
+        <center>
+            <h1>view Details</h1>
+            <table border="1">
+                <tr>
+                    <td>class</td>
+                    <td>subject</td>
+                    <td>twomark</td>
+                    <td>threemark</td>
+                    <td>fivemark</td>
+                </tr>
+                {% for i in a %}
+                <tr>
+                    <td>{{i.class1}}</td>
+                    <td>{{i.subject}}</td>
+                    <td>{{i.twomark}}</td>
+                    <td>{{i.threemark}}</td>
+                    <td>{{i.fivemark}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>

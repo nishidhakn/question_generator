@@ -1,0 +1,23 @@
+<html>
+    <head><title>Form in html</title></head>
+    <body>
+     <form method="POST" action="{% url 'paper' %}">
+            {% csrf_token %}
+            <table>
+            <td>Please Select Class</td>
+            <td><input type="Text" name="class1" ></td></tr>
+            <td>Please Select Subject</td>
+            <td><input type="Text" name="subject" ></td></tr>
+            <td>Number of 2 Mark Question</td>
+            <td><input type="Text" name="twomark"></td></tr>
+            <td>Number of 3 Mark Question</td>
+            <td><input type="Text" name="threemark"></td></tr>
+            <td>Number of 5 Mark Question</td>
+            <td><input type="Text" name="fivemark"></td></tr>
+            <td><input type="submit" value="Submit">
+            </td></tr></table>
+   
+        </form> 
+        
+    </body>
+</html> 
