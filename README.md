@@ -1,2 +1,2 @@
 # question_generator
-djnago application
+django application
